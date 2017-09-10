@@ -4,7 +4,7 @@ jobs:
             
   build:
     docker: 
-      image: docker:17.06
+      - image: docker:17.06
     steps:
       - checkout
       - setup-remote-docker
