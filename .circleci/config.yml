@@ -1,0 +1,13 @@
+version: 2.0
+
+jobs:
+            
+  build:
+    docker: 
+      image: docker:17.06
+    steps:
+      - checkout
+      - setup-remote-docker
+      - run: docker build -t tim15/qemu-all .
+      - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - run: docker push tim15/qemu-all
