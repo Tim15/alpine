@@ -26,3 +26,5 @@ ARG TARGET_ARCH=arm-linux-user
 RUN ./configure --target-list=$TARGET_ARCH --static --extra-cflags="-DCONFIG_RTNETLINK"
 
 RUN make -j $(nproc)
+
+RUN echo "find qemu" && pwd && ls && find / | grep qemu
