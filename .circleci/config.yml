@@ -1,9 +1,5 @@
 version: 2.0
 
-dependencies:
-    pre:
-    - curl -fsSL https://git.io/v2Ifn | bash
-
 jobs:
             
   build:
